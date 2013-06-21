@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Phrase:</b>
+  <%= @card.phrase %>
+</p>
+
+<p>
+  <b>Word:</b>
+  <%= @card.word %>
+</p>
+
+<p>
+  <b>Pos:</b>
+  <%= @card.pos %>
+</p>
+
+<p>
+  <b>Translation:</b>
+  <%= @card.translation %>
+</p>
+
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>
