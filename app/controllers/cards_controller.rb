@@ -27,8 +27,8 @@ class CardsController < ApplicationController
 
 
     Twitter.configure do |config|
-      config.consumer_key = 'w8bK0gvg8mue6k57ZYfXXA'
-      config.consumer_secret =  'mtqQ3Lq5jD0CAoWmOMiHkdtNc9bU0NfU9loCeXSs'
+      config.consumer_key = 'CnKtSXsUNxAXoHrQNung'
+      config.consumer_secret =  'Gupq226pEt2Z3BJmjzw3soJ4Yj2kW971dRcPMtdww'
       config.oauth_token = '7941112-aOBVVlC2ei8fEBrdOkZkdJXWJVULbuZiRMeQPFZBye'
       config.oauth_token_secret = 'q8X6CAIORoPtJ16rekf6ehMvW2rb2BOtOKGfSrBYSA'
     end
