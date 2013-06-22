@@ -1,3 +1,30 @@
+<% 
+
+
+    Twitter.configure do |config|
+      config.consumer_key = 'w8bK0gvg8mue6k57ZYfXXA'
+      config.consumer_secret =  'mtqQ3Lq5jD0CAoWmOMiHkdtNc9bU0NfU9loCeXSs'
+      config.oauth_token = '7941112-aOBVVlC2ei8fEBrdOkZkdJXWJVULbuZiRMeQPFZBye'
+      config.oauth_token_secret = 'q8X6CAIORoPtJ16rekf6ehMvW2rb2BOtOKGfSrBYSA'
+    end
+
+Twitter.search("to:justinbieber marry me", :count => 3, :result_type => "recent").results.map do |status|
+  @elmo = "#{status.from_user}: #{status.text}"
+
+end
+
+
+
+
+%>
+
+
+<%= 
+
+@elmo
+
+%>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -19,6 +46,8 @@
   <b>Translation:</b>
   <%= @card.translation %>
 </p>
+
+
 
 
 <%= link_to 'Edit', edit_card_path(@card) %> |

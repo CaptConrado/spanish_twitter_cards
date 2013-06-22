@@ -1,6 +1,8 @@
 Spanishswipe::Application.routes.draw do
   resources :cards
 
+  match 'me' => 'cards#user_tweet'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

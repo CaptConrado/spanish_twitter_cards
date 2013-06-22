@@ -1,3 +1,6 @@
+require "rubygems"
+require "twitter"
+
 class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
@@ -19,7 +22,25 @@ class CardsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @card }
     end
+
+    
+
+
+    Twitter.configure do |config|
+      config.consumer_key = 'w8bK0gvg8mue6k57ZYfXXA'
+      config.consumer_secret =  'mtqQ3Lq5jD0CAoWmOMiHkdtNc9bU0NfU9loCeXSs'
+      config.oauth_token = '7941112-aOBVVlC2ei8fEBrdOkZkdJXWJVULbuZiRMeQPFZBye'
+      config.oauth_token_secret = 'q8X6CAIORoPtJ16rekf6ehMvW2rb2BOtOKGfSrBYSA'
+    end
+    
+    # search = Twitter::Search.new
+
+    # search.containing("marry me").to("justinbieber").result_type("recent").per_page(3).each do |r|
+    #   puts "#{r.from_user}: #{r.text}"
+    # end
+
   end
+
 
   # GET /cards/new
   # GET /cards/new.json
