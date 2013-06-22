@@ -33,12 +33,7 @@ class CardsController < ApplicationController
       config.oauth_token_secret = 'q8X6CAIORoPtJ16rekf6ehMvW2rb2BOtOKGfSrBYSA'
     end
     
-    # search = Twitter::Search.new
-
-    # search.containing("marry me").to("justinbieber").result_type("recent").per_page(3).each do |r|
-    #   puts "#{r.from_user}: #{r.text}"
-    # end
-
+    
   end
 
 

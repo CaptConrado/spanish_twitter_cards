@@ -1,39 +1,33 @@
-<h1>Notes</h1>
+<center> <h1>Notes</h1> </center>
+
 
 <div id='mySwipe' style='max-width:500px;margin:0 auto' class='swipe'>
   <div class='swipe-wrap'>
 
     <!-- This is a thing -->
 
+    <% @cards.each do |card| %>
+      
+      <div>
+        <h3><%= card.word %> </h3>
+        <i>
+         <%= card.phrase %> 
+         </i>
+         <center>
+         <b>POS:</b> <%= card.pos %> 
+         <b>DEF:</b> <span><%= card.translation %> </span>
+         
+         </center>
+         <center>
+         <%= link_to 'Show', card %> 
+         <%= link_to 'Edit', edit_card_path(card) %> 
+         <%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </center>
+    </div>
 
+    <% end %>
 
-
-
-    
-    
-<% @cards.each do |card| %>
-  
-  <div>
-    <h3><%= card.word %> </h3>
-    <i>
-     <%= card.phrase %> 
-     </i>
-     <center>
-     <b><%= card.pos %> </b><span><%= card.translation %> </span>
-     
-     </center>
-     <center>
-     <%= link_to 'Show', card %> 
-     <%= link_to 'Edit', edit_card_path(card) %> 
-     <%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %> 
-  
-
-</center>
-</div>
-
-<% end %>
-
-    <!-- k -->
+    <!-- SKSJJKSKJSJKS -->
   </div>
 </div>
 
@@ -48,4 +42,5 @@
 
 <br />
 
-<%= link_to 'New Card', new_card_path %>
+
+<%= link_to 'Notes', new_card_path %>

@@ -1,29 +1,18 @@
-<% 
+<%
 
-
-    Twitter.configure do |config|
-      config.consumer_key = 'w8bK0gvg8mue6k57ZYfXXA'
-      config.consumer_secret =  'mtqQ3Lq5jD0CAoWmOMiHkdtNc9bU0NfU9loCeXSs'
-      config.oauth_token = '7941112-aOBVVlC2ei8fEBrdOkZkdJXWJVULbuZiRMeQPFZBye'
-      config.oauth_token_secret = 'q8X6CAIORoPtJ16rekf6ehMvW2rb2BOtOKGfSrBYSA'
-    end
-
-Twitter.search("to:justinbieber marry me", :count => 3, :result_type => "recent").results.map do |status|
-  @elmo = "#{status.from_user}: #{status.text}"
-
+Twitter.search(@card.word, :count => 3, :result_type => "recent").results.map do |status|
+  @x = "#{status.text}"
 end
 
-
+one_word = Twitter.search(@card.word, :lang => "es", :count => 3).results.first.text
+two_word = Twitter.search(@card.word, :lang => "es", :count => 3).results.second.text
+three_word = Twitter.search(@card.word, :lang => "es", :count => 3).results.last.text
 
 
 %>
 
 
-<%= 
 
-@elmo
-
-%>
 
 <p id="notice"><%= notice %></p>
 
@@ -47,7 +36,11 @@ end
   <%= @card.translation %>
 </p>
 
-
+<ul>
+  <li><%= one_word.to_s %></li>
+  <li><%= two_word %></li>
+  <li><%= three_word %></li>
+</ul>
 
 
 <%= link_to 'Edit', edit_card_path(@card) %> |
