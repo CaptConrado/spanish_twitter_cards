@@ -21,7 +21,16 @@
   </div>
   <div class="field">
     <%= f.label :pos %><br />
-    <%= f.text_field :pos %>
+
+    <select id="card_pos" name="card[pos]" type="radio">
+      <option value="0">Part of Speech</option>
+      <option value="Phrase">Phrase</option>
+      <option value="Verb">Verb - Verbo</option>
+      <option value="Noun">Noun - Sustantivo</option>
+      <option value="Pronoun">Pronoun - Pronombre</option>
+      <option value="Adjective">Adjective - Adjetivo</option>
+    </select>
+  </div>
   </div>
   <div class="field">
     <%= f.label :translation %><br />
